@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            background-color: #0a0f1a;
+        }
+
+        .payment-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1c2a3a;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .payment-container h1 {
+            text-align: center;
+            color: #4a90e2;
+        }
+
+        .payment-container p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .payment-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .payment-container label {
+            font-size: 1rem;
+            color: #e3e8f0;
+        }
+
+        .payment-container input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4a90e2;
+            background: #2c3e50;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .payment-container input::placeholder {
+            color: #b0c4de;
+        }
+
+        .pay-btn {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .pay-btn:hover {
+            background: #3671c2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payment-container">
+        <h1>Payment</h1>
+        <p>Proceed with your payment details.</p>
+       
+        <form>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+            <button type="button" class="pay-btn" onclick="msgshow()">Pay Now</button>
+        </form>
+    </div>
+</body>
+
+</html>

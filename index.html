@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            let category = '<option value="all">All</option>';
+            let prds = '';
+
+            $.getJSON("products.json", function (Prod) {
+                products = Prod;
+
+                for (let i = 0; i < Prod.length; i++) {
+                    if (!category.includes(`<option value="${Prod[i].Category}">`)) {
+                        category += `<option value="${Prod[i].Category}">${Prod[i].Category}</option>`;
+                    }
+
+                    prds += `
+            <div class="product-card" data-category="${Prod[i].Category}">
+                <img src="${Prod[i].image}" alt="${Prod[i].title}" style="height: 330px;">
+                <h2 class="product-title">${Prod[i].title}</h2>
+                <p class="product-price">${Prod[i].price}</p>
+                <p class="product-desc">${Prod[i].description}</p>
+                <button class="cart-btn" onclick="addToCart(${Prod[i].id})">Add to Cart</button>
+            </div>
+            `;
+                }
+
+                $("#catagories").append(category);
+                $("#productgallery").html(prds);
+            });
+
+            $("#catagories").change(function () {
+                let cat = $(this).val();
+                let filter = '';
+
+                $.getJSON("products.json", function (Prod) {
+                    for (let i = 0; i < Prod.length; i++) {
+                        if (cat === "all" || cat === Prod[i].Category) {
+                            filter += `
+                    <div class="product-card" data-category="${Prod[i].Category}">
+                        <img src="${Prod[i].image}" alt="${Prod[i].title}" style="height: 330px;">
+                        <h2 class="product-title">${Prod[i].title}</h2>
+                        <p class="product-price">${Prod[i].price}</p>
+                        <p class="product-desc">${Prod[i].description}</p>
+                        <button class="cart-btn" onclick="addToCart(${Prod[i].id})">Add to Cart</button>
+                    </div>
+                    `;
+                        }
+                    }
+                    $("#productgallery").html(filter);
+                });
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select" id="catagories">
+
+                </select>
+                <input placeholder="Search Steam" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-login border">
+                <a href="signin.html" class="btn-link"><button class="login-btn">Sign In</button></a>
+                <a href="signin.html" class="btn-link"><button class="login-btn">Login</button></a>
+            </div>
+
+            <div class="nav-cart border">
+                <button class="cart-btn" onclick="showCart()">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)
+                </button>
+
+                <div id="cart-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeCart()">&times;</span>
+                        <h2>Your Cart</h2>
+                        <div id="cart-items"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="slide fade">
+                    <img src="img/gta.jpeg" alt="Slide 1">
+                </div>
+                <div class="slide fade">
+                    <img src="img/wukong_banner.jpg" alt="Slide 2">
+                </div>
+                <div class="slide fade">
+                    <img src="img/_max_payne_3__banner___.jpg" alt="Slide 3">
+                </div>
+                <div class="slide fade">
+                    <img src="img/Halo_banner.jpg" alt="Slide 4">
+                </div>
+
+
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+
+
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+
+        <div id="productgallery">
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>About Us</h2>
+                <p>Welcome to our online store, your number one source for all things gaming.
+                    We're dedicated to providing you with the best selection of video games, ensuring quality and
+                    affordability.
+                    Our team is passionate about delivering an exceptional shopping experience, just like the one you
+                    get while playing your favorite games.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p><strong>Customer Support:</strong> support@amazongaming.com</p>
+                <p><strong>Phone:</strong> +1 800-123-4567</p>
+                <p><strong>Address:</strong> 123 Gaming Street, Los Angeles, CA, USA</p>
+                <p>Follow us on:
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

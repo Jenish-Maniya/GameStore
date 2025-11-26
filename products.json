@@ -1,0 +1,271 @@
+[
+  { 
+      "id": 1, 
+      "image": "img/img1.jpg", 
+      "title": "RDR2", 
+      "price": "$59.99", 
+      "description": "Play as Arthur Morgan in an epic Western.", 
+      "Category": "Action" 
+  },
+
+  { 
+      "id": 2, 
+      "image": "img/img2.jpg", 
+      "title": "Sifu", 
+      "price": "$89.99", 
+      "description": "A kung-fu action game with intense combat.", 
+      "Category": "Indie" 
+  },
+
+  { 
+      "id": 3, 
+      "image": "img/img3.jpg", 
+      "title": "Alan Wake", 
+      "price": "$39.99", 
+      "description": "A psychological thriller about a haunted writer.", 
+      "Category": "Horror" 
+  },
+
+  { 
+      "id": 4, 
+      "image": "img/img4.jpg", 
+      "title": "Witcher 3", 
+      "price": "$299.99", 
+      "description": "A vast open-world RPG as Geralt of Rivia.", 
+      "Category": "Adventure" 
+  },
+
+  { 
+      "id": 5, 
+      "image": "img/img5.jpg", 
+      "title": "COD MW2", 
+      "price": "$39.99", 
+      "description": "A fast-paced military shooter with intense action.", 
+      "Category": "Shooters" 
+  },
+
+  { 
+      "id": 6, 
+      "image": "img/img6.jpg", 
+      "title": "Black Myth Wukong", 
+      "price": "$39.99", 
+      "description": "A mythical action RPG inspired by Journey to the West.", 
+      "Category": "Action" 
+  },
+
+  { 
+      "id": 7, 
+      "image": "img/img7.jpg", 
+      "title": "Behind the Frame", 
+      "price": "$39.99", 
+      "description": "A beautiful narrative adventure about an artist.", 
+      "Category": "Indie" 
+  },
+
+  { 
+      "id": 8, 
+      "image": "img/img8.jpg", 
+      "title": "Cyberpunk 2077", 
+      "price": "$39.99", 
+      "description": "A futuristic RPG set in the open-world Night City.", 
+      "Category": "Adventure" 
+  },
+
+  { 
+      "id": 9, 
+      "image": "img/img9.jpg", 
+      "title": "Sniper Elite 4", 
+      "price": "$39.99", 
+      "description": "A tactical stealth shooter set in WWII.", 
+      "Category": "Action" 
+  },
+
+  { 
+      "id": 10, 
+      "image": "img/img10.jpg", 
+      "title": "Visage", 
+      "price": "$39.99", 
+      "description": "A terrifying psychological horror experience.", 
+      "Category": "Horror" 
+  },
+
+  { 
+      "id": 11, 
+      "image": "img/img11.jpg", 
+      "title": "World War Z", 
+      "price": "$39.99", 
+      "description": "A cooperative zombie survival shooter.", 
+      "Category": "Horror" 
+  },
+
+  { 
+      "id": 12, 
+      "image": "img/img12.jpg", 
+      "title": "Spec Ops", 
+      "price": "$39.99", 
+      "description": "A gripping military shooter with a deep story.", 
+      "Category": "Shooters" 
+  },
+
+  { 
+      "id": 13, 
+      "image": "img/img13.jpg", 
+      "title": "Turmoil", 
+      "price": "$39.99", 
+      "description": "A fun oil-drilling simulation game.", 
+      "Category": "Indie" 
+  },
+
+  { 
+      "id": 14, 
+      "image": "img/img14.jpg", 
+      "title": "Batman Arkham Knight", 
+      "price": "$39.99", 
+      "description": "A dark, action-packed superhero adventure.", 
+      "Category": "Action" 
+  },
+
+  { 
+      "id": 15, 
+      "image": "img/img15.jpeg", 
+      "title": "L.A. Noire", 
+      "price": "$39.99", 
+      "description": "A detective thriller set in 1940s Los Angeles.", 
+      "Category": "Adventure" 
+  },
+
+  { 
+      "id": 16, 
+      "image": "img/img16.jpg", 
+      "title": "GTA 5", 
+      "price": "$39.99", 
+      "description": "A chaotic open-world crime experience.", 
+      "Category": "Action" 
+  },
+
+  { 
+      "id": 17, 
+      "image": "img/img17.jpg", 
+      "title": "Stalker 2", 
+      "price": "$39.99", 
+      "description": "A survival horror shooter in the Chernobyl zone.", 
+      "Category": "Shooters" 
+  },
+
+  { 
+      "id": 18, 
+      "image": "img/img18.jpg", 
+      "title": "Ready Or Not", 
+      "price": "$39.99", 
+      "description": "A tactical SWAT-based shooter.", 
+      "Category": "Shooters" 
+  },
+
+  { 
+      "id": 19, 
+      "image": "img/img19.jpg", 
+      "title": "Stardew Valley", 
+      "price": "$39.99", 
+      "description": "A relaxing farming and life simulation.", 
+      "Category": "Indie" 
+  },
+
+  { 
+      "id": 20, 
+      "image": "img/img20.jpg", 
+      "title": "Dredge", 
+      "price": "$39.99", 
+      "description": "A mysterious deep-sea fishing adventure.", 
+      "Category": "Indie" 
+  },
+
+  { 
+      "id": 21, 
+      "image": "img/img21.jpeg", 
+      "title": "Tomb Raider", 
+      "price": "$39.99", 
+      "description": "A thrilling action-adventure with Lara Croft.", 
+      "Category": "Adventure" 
+  },
+
+  { 
+      "id": 22, 
+      "image": "img/img22.jpg", 
+      "title": "Sleeping Dogs", 
+      "price": "$39.99", 
+      "description": "An undercover cop thriller in Hong Kong.", 
+      "Category": "Adventure" 
+  },
+
+  { 
+      "id": 23, 
+      "image": "img/img23.jpg", 
+      "title": "Resident Evil 4", 
+      "price": "$39.99", 
+      "description": "A survival horror classic with intense action.", 
+      "Category": "Horror" 
+  },
+
+  { 
+      "id": 24, 
+      "image": "img/img24.jpg", 
+      "title": "Outlast", 
+      "price": "$39.99", 
+      "description": "A terrifying first-person horror experience.", 
+      "Category": "Horror" 
+  },
+
+  { 
+      "id": 25, 
+      "image": "img/img25.jpg", 
+      "title": "Wolfenstein", 
+      "price": "$39.99", 
+      "description": "An intense shooter fighting against Nazis.", 
+      "Category": "Shooters" 
+  },
+
+  { 
+      "id": 26, 
+      "image": "img/img26.jpg", 
+      "title": "Half-Life ALYX", 
+      "price": "$39.99", 
+      "description": "A groundbreaking VR sci-fi shooter.", 
+      "Category": "VR" 
+  },
+
+  { 
+      "id": 27, 
+      "image": "img/img27.jpg", 
+      "title": "No Man's Sky", 
+      "price": "$39.99", 
+      "description": "An endless space exploration experience.", 
+      "Category": "VR" 
+  },
+
+  { 
+      "id": 28, 
+      "image": "img/img28.jpeg", 
+      "title": "Batman Arkham Shadow", 
+      "price": "$39.99", 
+      "description": "A new Batman VR experience.", 
+      "Category": "VR" 
+  },
+
+  { 
+      "id": 29, 
+      "image": "img/img29.jpg", 
+      "title": "Forza Horizon 4", 
+      "price": "$39.99", 
+      "description": "An open-world racing experience.", 
+      "Category": "VR" 
+  },
+
+  { 
+      "id": 30, 
+      "image": "img/img30.jpg", 
+      "title": "Alien Rogue Incursion", 
+      "price": "$39.99", 
+      "description": "A sci-fi horror VR survival game.", 
+      "Category": "VR" 
+  }
+]
